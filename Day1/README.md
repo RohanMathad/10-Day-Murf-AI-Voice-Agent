@@ -19,5 +19,15 @@ A complete **real-time voice agent** using:
 - Works entirely in real-time  
 
 ## 🗂️ How To Run (Local)
-1. Start LiveKit server  
-2. Run backend:  
+1. Start LiveKit server: ten-days-of-voice-agents-2025-main file
+   ```bash
+   .\livekit-server.exe --dev
+   ```
+3. Run backend:
+   ```bash
+   uv run python src/agent.py dev
+   ```
+4. Run Frontend
+   ```bash
+   pnpm dev
+   ```
