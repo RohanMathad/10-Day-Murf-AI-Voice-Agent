@@ -1,36 +1,138 @@
-# 🎙️ Day 1 — Murf AI Voice Agents Challenge
+# Day 2 – Coffee Shop Barista Voice Agent
 
-This is my **Day 1 project** for the Murf AI Voice Agents Challenge.
+(10-Day Murf AI Voice Agent Challenge)
 
-## ⭐ What I Built Today
-A complete **real-time voice agent** using:
+Today’s task was to extend the voice agent into a fully functional **Coffee Shop Barista** that can:
+✔ listen to the user
+✔ understand the coffee order
+✔ store each detail using tool calls
+✔ and finally **save the completed order as a JSON file** using a FastAPI backend.
 
-- 🧠 **Google Gemini** — LLM for generating intelligent responses  
-- 🎧 **Deepgram** — Speech-to-text  
-- 🔊 **Murf Falcon** — Ultra-fast text-to-speech  
-- 🔗 **LiveKit** — Real-time audio pipeline  
-- 💻 **Next.js Frontend** — Voice UI with microphone streaming  
+---
 
-## 🚀 What It Can Do
-- Listens to the user’s voice  
-- Converts it to text  
-- Processes with Gemini  
-- Responds immediately using Murf Falcon  
-- Works entirely in real-time  
+## **✔ What I Built Today**
 
-## 🗂️ How To Run (Local)
-1. Start LiveKit server: ten-days-of-voice-agents-2025-main file
-   ```bash
-   .\livekit-server.exe --dev
-   ```
-3. Run backend:
-   ```bash
-   uv run python src/agent.py dev
-   ```
-4. Run Frontend
-   ```bash
-   pnpm dev
-   ```
+### **1️⃣ Voice Agent Improvements**
 
-<img width="1075" height="689" alt="1" src="https://github.com/user-attachments/assets/081b71cb-4853-4c75-a0ef-4870d202757a" />
-<img width="1066" height="584" alt="2" src="https://github.com/user-attachments/assets/690c2aa4-125d-4b2b-86e5-70738131c79c" />
+* Added a new tool: `send_order_to_server()`
+* After the agent collects **drink type, size, milk, extras, and customer name**, it automatically sends the order to the backend.
+* Removed old file-writing logic from `agent.py` (since backend handles saving now).
+
+---
+
+## **2️⃣ FastAPI Backend for Saving Orders**
+
+Created a new backend service:
+
+```
+Day2/backend/src/save_order.py
+```
+
+### **API Endpoint**
+
+`POST http://localhost:5000/save`
+
+### **What it does**
+
+* Receives order data from the agent
+* Stores it as a **JSON file** inside the backend folder
+* Files are saved as:
+
+```
+order_YYYYMMDD_HHMMSS.json
+```
+
+---
+
+## **3️⃣ Technologies Used Today**
+
+### **🟣 Murf Falcon (Fastest TTS API)**
+
+* Using **Murf Falcon** for ultra-fast text-to-speech responses
+* Makes the barista feel instant and natural
+
+### **⚡ LiveKit**
+
+* Handles real-time voice
+* Turn detection
+* Preemptive generation
+* Smooth user-agent interaction
+
+### **🎧 Deepgram STT**
+
+* For accurate live speech-to-text
+
+### **🧠 Gemini 2.5 Flash**
+
+* For fast and smart LLM responses
+
+### **🟦 FastAPI**
+
+* Lightweight backend to store orders
+
+---
+
+## **4️⃣ Folder Structure for Day 2**
+
+```
+Day2/
+├── backend/
+│   ├── src/
+│   │   ├── agent.py        ← Main voice agent
+│   │   └── save_order.py   ← FastAPI order-saving service
+│   └── ...
+├── frontend/
+└── ...
+```
+
+---
+
+## **5️⃣ How to Run**
+
+### **Start Backend Server**
+
+```
+cd Day2/backend
+uvicorn src.save_order:app --port 5000
+```
+
+### **Start Voice Agent**
+
+```
+uv run python src/agent.py dev
+```
+
+---
+
+## **6️⃣ Demo Flow**
+
+User speaks their order:
+
+> “I want a medium latte with oat milk and whipped cream.
+> My name is Ram.”
+
+Agent fills the order step-by-step and finally says:
+
+> “Your order is complete! Sending it to the kitchen now.”
+
+JSON file gets created in backend folder:
+
+```
+order_20251123_114102.json
+```
+
+---
+
+## **⭐ Day 2 Completed!**
+
+Core achievements:
+
+* Fully automated data flow
+* Tool-enabled agent memory
+* Backend integration
+* Real JSON file output
+* Ultra-fast Murf Falcon TTS responses
+
+Excited for Day 3! 🚀
+
+---
