@@ -1,9 +1,3 @@
-# ======================================================
-# 🧠 DAY 3 – HEALTH & WELLNESS VOICE COMPANION
-# Pattern: Dataclasses + Userdata + JSON persistence
-# Works exactly like the YouTuber’s project structure
-# ======================================================
-
 import logging
 import json
 import os
@@ -32,9 +26,6 @@ from livekit.plugins.turn_detector.multilingual import MultilingualModel
 logger = logging.getLogger("agent")
 load_dotenv(".env.local")
 
-# ======================================================
-# 📁 WELLNESS LOG STRUCTURE
-# ======================================================
 
 WELLNESS_FILE = "wellness_log.json"
 
@@ -59,11 +50,6 @@ def save_entry(entry: dict):
     with open(WELLNESS_FILE, "w") as f:
         json.dump(entries, f, indent=4)
 
-
-# ======================================================
-# 🧘 WELLNESS STATE
-# ======================================================
-
 @dataclass
 class WellnessState:
     mood: Optional[str] = None
@@ -84,10 +70,6 @@ class Userdata:
     wellness: WellnessState
     previous_entries: list = field(default_factory=load_previous_entries)
 
-
-# ======================================================
-# 🛠️ FUNCTION TOOLS
-# ======================================================
 
 @function_tool
 async def set_mood(ctx: RunContext[Userdata], mood: str) -> str:
@@ -147,9 +129,6 @@ async def get_previous_summary(ctx: RunContext[Userdata]) -> str:
     )
 
 
-# ======================================================
-# 🎙️ WELLNESS AGENT LOGIC
-# ======================================================
 
 class WellnessAgent(Agent):
     def __init__(self):
@@ -182,10 +161,6 @@ class WellnessAgent(Agent):
             tools=[set_mood, set_energy, add_goal, finalize_checkin, get_previous_summary],
         )
 
-
-# ======================================================
-# 🚀 SESSION & PIPELINE
-# ======================================================
 
 def prewarm(proc: JobProcess):
     proc.userdata["vad"] = silero.VAD.load()
