@@ -1,5 +1,5 @@
 
-# Day 3: Health & Wellness Voice Companion**
+# Day 3: Health & Wellness Voice Companion
 
 ### *10-Day Murf AI Voice Agent Challenge*
 
