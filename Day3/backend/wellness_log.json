@@ -1,0 +1,31 @@
+[
+    {
+        "timestamp": "2025-11-24T16:06:00.242340",
+        "mood": "excellent",
+        "energy": "five",
+        "goals": [
+            "study",
+            "exercise"
+        ],
+        "summary": "Today you're feeling excellent, your energy is five, and your goals are: study, exercise."
+    },
+    {
+        "timestamp": "2025-11-24T16:22:31.053850",
+        "mood": "very good",
+        "energy": "super energetic",
+        "goals": [
+            "go to the gym",
+            "study"
+        ],
+        "summary": "Today you're feeling very good, your energy is super energetic, and your goals are: go to the gym, study."
+    },
+    {
+        "timestamp": "2025-11-24T16:39:00.385853",
+        "mood": "good",
+        "energy": "mellow",
+        "goals": [
+            "study for my exams"
+        ],
+        "summary": "Today you're feeling good, your energy is mellow, and your goals are: study for my exams."
+    }
+]
