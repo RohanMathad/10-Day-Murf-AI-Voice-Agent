@@ -1,36 +1,141 @@
-# 🎙️ Day 1 — Murf AI Voice Agents Challenge
 
-This is my **Day 1 project** for the Murf AI Voice Agents Challenge.
+# Day 3: Health & Wellness Voice Companion**
 
-## ⭐ What I Built Today
-A complete **real-time voice agent** using:
+### *10-Day Murf AI Voice Agent Challenge*
 
-- 🧠 **Google Gemini** — LLM for generating intelligent responses  
-- 🎧 **Deepgram** — Speech-to-text  
-- 🔊 **Murf Falcon** — Ultra-fast text-to-speech  
-- 🔗 **LiveKit** — Real-time audio pipeline  
-- 💻 **Next.js Frontend** — Voice UI with microphone streaming  
+## 📌 Overview
 
-## 🚀 What It Can Do
-- Listens to the user’s voice  
-- Converts it to text  
-- Processes with Gemini  
-- Responds immediately using Murf Falcon  
-- Works entirely in real-time  
+**Day 3** introduces a **Health & Wellness Voice Companion**—a supportive, grounded daily check-in agent.
+It talks to the user about their mood, energy, and goals, then saves the results into a JSON file.
+Next time the agent runs, it reads past entries and mentions previous days naturally.
 
-## 🗂️ How To Run (Local)
-1. Start LiveKit server: ten-days-of-voice-agents-2025-main file
-   ```bash
-   .\livekit-server.exe --dev
-   ```
-3. Run backend:
-   ```bash
-   uv run python src/agent.py dev
-   ```
-4. Run Frontend
-   ```bash
-   pnpm dev
-   ```
+This entire logic is implemented inside **`backend/src/agent.py`** using LiveKit Agents + Murf Falcon TTS.
 
-<img width="1075" height="689" alt="1" src="https://github.com/user-attachments/assets/081b71cb-4853-4c75-a0ef-4870d202757a" />
-<img width="1066" height="584" alt="2" src="https://github.com/user-attachments/assets/690c2aa4-125d-4b2b-86e5-70738131c79c" />
+---
+
+## 🎯 **Features Completed (Day 3 Requirements)**
+
+### ✔ 1. Daily Voice Check-In Flow
+
+The agent:
+
+* Asks about mood, energy, and stress level
+* Asks for 1–3 goals or intentions for today
+* Summarizes the day back to the user
+* Stores each session’s data persistently
+
+All conversations are fully voice-based using **Murf Falcon (the fastest TTS API)**.
+
+---
+
+### ✔ 2. JSON-Based Persistence
+
+Every session is saved as a structured entry inside:
+
+```
+wellness_log.json
+```
+
+Each entry contains:
+
+* `timestamp`
+* `mood`
+* `energy`
+* `intentions`
+* `summary`
+
+The JSON structure is clean and readable.
+
+---
+
+### ✔ 3. Uses Past Data
+
+At the start of a new day, the agent automatically reads `wellness_log.json` and says things like:
+
+* *“Last time you mentioned low energy. How are you today?”*
+* *“Yesterday you planned to focus on rest. Were you able to do that?”*
+
+No diagnosis. No medical claims. Just supportive reference to previous check-ins.
+
+---
+
+### ✔ 4. Realistic Guidance (Non-Medical)
+
+Advice is always:
+
+* small
+* practical
+* grounded
+* non-clinical
+
+Examples:
+
+* *“Break the task into smaller steps.”*
+* *“Try taking a 5-minute reset before starting.”*
+
+---
+
+### ✔ 5. Updated Agent Instructions
+
+The `agent.py` contains a carefully designed system prompt to keep the tone warm, supportive, and stable.
+
+---
+
+## 🧠 **Tech Stack**
+
+* **LiveKit Agents** (STT, event loop, session handling)
+* **Google Gemini 2.5 Flash** (LLM)
+* **Murf Falcon** (TTS – fastest voice engine)
+* **Deepgram / Silero** (STT / VAD depending on config)
+* **Next.js Frontend** (UI for the voice session)
+* **Python (FastAPI + file persistence)**
+
+---
+
+## 📂 Folder Structure (Day 3)
+
+```
+Day3/
+  ├── backend/
+  │   ├── src/
+  │   │   └── agent.py   ← Day 3 logic here
+  │   └── wellness_log.json (auto created)
+  └── frontend/
+      └── (UI, voice interface)
+```
+
+---
+
+## ▶️ How It Works (Flow)
+
+1. User starts a voice session
+2. Agent introduces itself and begins a wellness check-in
+3. Collects:
+
+   * Mood
+   * Energy level
+   * Stress
+   * Daily goals
+4. Summarizes the day
+5. Saves the data in **wellness_log.json**
+6. On next session, reads older entries and follows up
+
+---
+
+## 🚀 Running Day 3
+
+### Backend
+
+```bash
+cd Day3/backend
+uvicorn src.agent:app --reload
+```
+
+### Frontend
+
+```bash
+cd Day3/frontend
+npm install
+npm run dev
+```
+
