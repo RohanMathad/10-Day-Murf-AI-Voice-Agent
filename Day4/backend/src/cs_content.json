@@ -1,0 +1,56 @@
+[
+    {
+        "id": "java_basics",
+        "title": "Java Basics",
+        "summary": "Java is an object-oriented, class-based programming language used for building cross-platform applications. Key elements include classes, objects, methods, and strong typing.",
+        "sample_question": "What are the main features of Java and why is it called 'write once, run anywhere'?"
+    },
+    {
+        "id": "oop",
+        "title": "Object-Oriented Programming (Java)",
+        "summary": "OOP in Java uses classes and objects to model real-world entities. Core concepts: encapsulation, inheritance, polymorphism, and abstraction.",
+        "sample_question": "Explain encapsulation with an example in Java."
+    },
+    {
+        "id": "java_collections",
+        "title": "Java Collections",
+        "summary": "The Java Collections Framework provides data structures like List, Set, Map and utilities to store and manipulate groups of objects efficiently.",
+        "sample_question": "What is the difference between ArrayList and LinkedList in Java?"
+    },
+    {
+        "id": "functions_and_methods",
+        "title": "Functions / Methods",
+        "summary": "Methods (functions) are reusable blocks of code that perform a task. In Java, methods are defined inside classes and can accept parameters and return values.",
+        "sample_question": "What is method overloading and how does Java resolve overloaded methods?"
+    },
+    {
+        "id": "arrays_and_strings",
+        "title": "Arrays & Strings",
+        "summary": "Arrays store fixed-size sequences of elements. Strings are immutable sequences of characters in Java, with many built-in utility methods.",
+        "sample_question": "How is a String different from StringBuilder in Java?"
+    },
+    {
+        "id": "dsa_intro",
+        "title": "DSA: Basic Concepts",
+        "summary": "Data Structures and Algorithms (DSA) deal with organizing data and performing operations efficiently. Core DS: arrays, linked lists, stacks, queues, trees, graphs; common algorithms: sorting, searching.",
+        "sample_question": "What are the time/space trade-offs between arrays and linked lists?"
+    },
+    {
+        "id": "sorting_searching",
+        "title": "Sorting & Searching",
+        "summary": "Important sorting algorithms include Bubble, Selection, Insertion, Merge, Quick, and Heap sort. Searching algorithms include linear and binary search (binary requires sorted data).",
+        "sample_question": "Explain QuickSort and its average vs worst-case complexity."
+    },
+    {
+        "id": "trees_graphs",
+        "title": "Trees & Graphs",
+        "summary": "Trees and graphs represent hierarchical and networked relationships respectively. Basic traversals: BFS (level order) and DFS (preorder/inorder/postorder for trees).",
+        "sample_question": "What is the difference between BFS and DFS and when to use each?"
+    },
+    {
+        "id": "dynamic_programming",
+        "title": "Dynamic Programming",
+        "summary": "Dynamic Programming (DP) optimizes recursive solutions by caching overlapping subproblems (memoization) or using tabulation. Useful for optimization problems.",
+        "sample_question": "Describe memoization and tabulation with a Fibonacci example."
+    }
+]
