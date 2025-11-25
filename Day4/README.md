@@ -1,36 +1,51 @@
-# 🎙️ Day 1 — Murf AI Voice Agents Challenge
 
-This is my **Day 1 project** for the Murf AI Voice Agents Challenge.
+# **Day 4 – Voice-Based Java & DSA Active Recall Tutor**
 
-## ⭐ What I Built Today
-A complete **real-time voice agent** using:
+This project implements a fully interactive **voice AI tutor** that teaches Java and DSA concepts using three dynamic learning modes. Each mode switches to a dedicated Murf Falcon voice and adapts its behavior in real time.
 
-- 🧠 **Google Gemini** — LLM for generating intelligent responses  
-- 🎧 **Deepgram** — Speech-to-text  
-- 🔊 **Murf Falcon** — Ultra-fast text-to-speech  
-- 🔗 **LiveKit** — Real-time audio pipeline  
-- 💻 **Next.js Frontend** — Voice UI with microphone streaming  
+## 🚀 Features
 
-## 🚀 What It Can Do
-- Listens to the user’s voice  
-- Converts it to text  
-- Processes with Gemini  
-- Responds immediately using Murf Falcon  
-- Works entirely in real-time  
+### 🎧 **Learn Mode (Matthew)**
 
-## 🗂️ How To Run (Local)
-1. Start LiveKit server: ten-days-of-voice-agents-2025-main file
-   ```bash
-   .\livekit-server.exe --dev
-   ```
-3. Run backend:
-   ```bash
-   uv run python src/agent.py dev
-   ```
-4. Run Frontend
-   ```bash
-   pnpm dev
-   ```
+Explains the selected Java/DSA topic clearly using structured summaries.
 
-<img width="1075" height="689" alt="1" src="https://github.com/user-attachments/assets/081b71cb-4853-4c75-a0ef-4870d202757a" />
-<img width="1066" height="584" alt="2" src="https://github.com/user-attachments/assets/690c2aa4-125d-4b2b-86e5-70738131c79c" />
+### ❓ **Quiz Mode (Alicia)**
+
+Asks active-recall questions to test understanding.
+
+### 🗣️ **Teach-Back Mode (Ken)**
+
+Listens to your explanation, evaluates it, and gives a score with feedback.
+
+## 📘 Course Content (JSON Driven)
+
+A lightweight `cs_content.json` file powers all learning topics:
+
+* Java Basics
+* OOP
+* Collections
+* Arrays & Strings
+* Functions
+* DSA Intro
+* Sorting & Searching
+* Trees & Graphs
+* Dynamic Programming
+
+## 🔊 Voice Experience
+
+Powered by **Murf Falcon TTS**, each mode introduces itself with a custom voice personality.
+
+## 🧠 What’s New Today
+
+* Complete agent refactor (agent.py)
+* Dynamic mode switching
+* Voice introductions
+* CS/DSA-focused knowledge base
+* Improved error handling & stability
+
+---
+
+Part of the **#10DaysofAIVoiceAgents** challenge
+Built for the **#MurfAIVoiceAgentsChallenge**.
+
+---
