@@ -1,0 +1,30 @@
+[
+    {
+        "question": "What does Lenskart sell?",
+        "answer": "Lenskart sells prescription eyeglasses, sunglasses, contact lenses, frames, lens packages, and eyewear accessories across online and offline stores."
+    },
+    {
+        "question": "Do you offer eye tests?",
+        "answer": "Yes. In-store eye tests are free at many Lenskart stores. Lenskart also offers home eye tests (a small convenience fee applies when booked)."
+    },
+    {
+        "question": "Can I try frames at home?",
+        "answer": "Yes. Lenskart's 'Try at Home' service lets you select up to 5 frames to try at home for free before purchase."
+    },
+    {
+        "question": "What are typical price ranges?",
+        "answer": "Frame and glasses prices vary widely — Lenskart lists options from budget frames (a few hundred rupees) to premium frames (several thousand rupees). Basic lens packages are available at low price tiers (example: ~₹199 lens package)."
+    },
+    {
+        "question": "How much do contact lenses cost?",
+        "answer": "Contact lens prices vary by brand and type; Lenskart carries disposable and branded contact lenses starting from low-cost options (examples on site show starting price points around ₹100–₹200 for select products)."
+    },
+    {
+        "question": "Do you provide corporate / franchise partnerships?",
+        "answer": "Yes. Lenskart supports B2B / partner / franchise programs and has retail presence across many cities via stores and partnerships."
+    },
+    {
+        "question": "What if you don't know an answer?",
+        "answer": "If the information isn't in the FAQ, the agent should say: 'I'll check with the Lenskart team and get back to you by email.' (avoid guessing specifics not in the FAQ)."
+    }
+]

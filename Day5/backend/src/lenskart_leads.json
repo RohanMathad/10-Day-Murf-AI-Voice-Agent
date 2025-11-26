@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Sam",
+        "company": "alphabet.com",
+        "email": "Sam@gmail.com",
+        "role": "Software Engineer",
+        "use_case": "Personal spectacles or contact lenses",
+        "team_size": "1",
+        "timeline": "1-2 months",
+        "timestamp": "2025-11-25T16:42:19.168106Z"
+    },
+    {
+        "name": "Joseph",
+        "company": null,
+        "email": "joseph@ratemail.com",
+        "role": null,
+        "use_case": "Personal Interest",
+        "team_size": null,
+        "timeline": null,
+        "timestamp": "2025-11-26T04:13:16.288179Z"
+    },
+    {
+        "name": "Alex",
+        "company": "Pixel Forge",
+        "email": "alex@gmail.com",
+        "role": "product designer",
+        "use_case": "sunglasses for my team",
+        "team_size": "around twelve",
+        "timeline": "next month",
+        "timestamp": "2025-11-26T04:21:03.709474Z"
+    }
+]
