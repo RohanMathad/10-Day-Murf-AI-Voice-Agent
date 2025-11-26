@@ -1,4 +1,4 @@
-# 📄 **README – Day 5: AI SDR Voice Agent (Murf AI Voice Agent Challenge)**
+# 📄 **Day 5: AI SDR Voice Agent (Murf AI Voice Agent Challenge)**
 
 ## ⭐ Overview
 
