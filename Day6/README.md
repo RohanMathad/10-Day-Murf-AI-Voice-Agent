@@ -1,92 +1,91 @@
-# Day 6 – HDFC Bank Fraud Alert Voice Agent
+# Day 6 – HDFC Bank Fraud Alert Voice Agent (SQLite)
 
-AI Voice Agent Challenge – Murf AI (10 Days of Voice Agents)
+This project implements a **Fraud Alert Voice Agent** for **HDFC Bank** using **LiveKit Voice Agents**, **SQLite**, **Deepgram STT**, **Google Gemini**, and the **fastest TTS API — Murf Falcon**.
 
-This project implements a **Fraud Alert Voice Agent** for **HDFC Bank**, built using **LiveKit Voice Agents**, **Google Gemini**, **Deepgram STT**, and the **fastest TTS API — Murf Falcon**.
-
-The agent automatically calls a customer (browser-based for MVP), verifies their identity via a safe field (Security Identifier), reads a suspicious transaction from a database, and updates the status based on the user's response.
+The agent loads suspicious transactions from a SQLite database, verifies the customer, explains the flagged transaction, and updates the fraud status based on the user’s voice response.
 
 ---
 
-## 🎯 Primary Goal (MVP) — Completed
+## ✅ Features
 
-This implementation fully achieves the primary goal:
+* Loads fraud cases from **SQLite database**
+* Safe identity verification using Security Identifier
+* Reads suspicious transaction details
+* Asks user to confirm if the transaction is legitimate
+* Updates case in DB as:
 
-### ✔ Fake fraud cases stored in JSON database
+  * `confirmed_safe`
+  * `confirmed_fraud`
+* Fully voice-driven using LiveKit
+* Uses Murf Falcon TTS for fast, natural responses
 
-Each record contains:
+---
 
-* User name
+## 🔧 Tech Stack
+
+* **Python 3**
+* **SQLite**
+* **LiveKit Agents SDK**
+* **Murf Falcon (TTS)**
+* **Deepgram Nova-3 (STT)**
+* **Google Gemini 2.5 Flash (LLM)**
+
+---
+
+## ▶️ Running the Project
+
+### Backend
+
+```bash
+cd Day6/backend
+uv run src/agent.py
+```
+
+### Frontend
+
+```bash
+cd Day6/frontend
+pnpm install
+pnpm dev
+```
+
+Open:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📦 Database
+
+Fraud cases are stored in:
+
+```
+fraud_db.sqlite
+```
+
+Sample entries include:
+
+* Customer name
 * Security Identifier
 * Card ending
-* Transaction details (amount, merchant, location, time)
-* Current status (`pending_review`)
-* Notes
-
-### ✔ Agent loads user case dynamically
-
-When the call starts:
-
-* The agent asks for the name
-* Uses `lookup_customer` (tool) to fetch the fraud record
-* Saves it in session state
-
-### ✔ Secure identity verification
-
-The agent:
-
-* Asks for Security Identifier
-* Verifies against DB
-* Continues or ends the call safely
-
-### ✔ Suspicious transaction review
-
-The agent reads:
-
-* Amount
 * Merchant
-* Time
+* Amount
+* Timestamp
 * Transaction source
-* Card ending
-
-### ✔ User confirmation (YES/NO)
-
-The agent asks:
-
-> “Did you authorize this transaction?”
-
-### ✔ DB Update
-
-Based on the answer:
-
-* YES → `confirmed_safe`
-* NO → `confirmed_fraud`
-
-Database file updates automatically with outcome notes.
-
-### ✔ Full working video demo completed
-
-Showing:
-
-* Conversation
-* Tool calls
-* Updated fraud database
+* Current status
 
 ---
 
-## 🧩 Tools Implemented
+## 🎥 Demo Includes
 
-### 1️⃣ `lookup_customer`
+* Voice conversation with the agent
+* Verification flow
+* Fraud/safe confirmation
+* Updated SQLite records
 
-* Searches database by username
-* Loads fraud case into session
-* Returns verification details
-
-### 2️⃣ `resolve_fraud_case`
-
-* Accepts status: `confirmed_safe` / `confirmed_fraud`
-* Updates DB
-* Returns agent instructions (e.g., “card blocked”)
+---
 
 ---
 
