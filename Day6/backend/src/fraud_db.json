@@ -1,0 +1,57 @@
+[
+    {
+        "userName": "Rohan",
+        "securityIdentifier": "88321",
+        "cardEnding": "5521",
+        "transactionName": "Ecom Traders India",
+        "transactionAmount": "\u20b918,499",
+        "transactionTime": "11:45 PM IST",
+        "transactionSource": "flipkart.com",
+        "case_status": "confirmed_safe",
+        "notes": "Customer confirmed the transaction was legitimate."
+    },
+    {
+        "userName": "Meera",
+        "securityIdentifier": "77291",
+        "cardEnding": "9910",
+        "transactionName": "CryptoFast Exchange",
+        "transactionAmount": "\u20b982,000",
+        "transactionTime": "2:10 AM IST",
+        "transactionSource": "online_transfer",
+        "case_status": "confirmed_fraud",
+        "notes": "Customer confirmed they did not authorize the \u20b982,000 transaction at CryptoFast Exchange."
+    },
+    {
+        "userName": "Amit",
+        "securityIdentifier": "44012",
+        "cardEnding": "3015",
+        "transactionName": "QuickMart Groceries",
+        "transactionAmount": "\u20b9985",
+        "transactionTime": "3:22 PM IST",
+        "transactionSource": "in_store_pos",
+        "case_status": "confirmed_safe",
+        "notes": "Customer confirmed the small transaction at QuickMart was authorized for groceries."
+    },
+    {
+        "userName": "Sam",
+        "securityIdentifier": "10987",
+        "cardEnding": "1147",
+        "transactionName": "Global Travel Agency",
+        "transactionAmount": "\u20b955,750",
+        "transactionTime": "9:05 AM IST",
+        "transactionSource": "travel_booking_site",
+        "case_status": "confirmed_fraud",
+        "notes": "Customer reported the transaction as unauthorized."
+    },
+    {
+        "userName": "Josh",
+        "securityIdentifier": "65134",
+        "cardEnding": "7789",
+        "transactionName": "Trendy Gadgets Store",
+        "transactionAmount": "\u20b932,100",
+        "transactionTime": "7:50 PM IST",
+        "transactionSource": "e_commerce_site",
+        "case_status": "confirmed_fraud",
+        "notes": "Customer reported not making this purchase. Card immediately blocked and investigation started."
+    }
+]
