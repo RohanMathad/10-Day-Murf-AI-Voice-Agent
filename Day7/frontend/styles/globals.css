@@ -1,0 +1,178 @@
+/* Zomato Red Theme Global CSS */
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ----------------------------- */
+/* ZOMATO COLOR PALETTE */
+/* ----------------------------- */
+:root {
+  --radius: 0.625rem;
+
+  /* Core Brand Colors */
+  --background: #E23744;          /* Zomato Red Background */
+  --foreground: #ffffff;          /* White Foreground Text */
+
+  --card: #ffffff;
+  --card-foreground: #111111;
+
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+
+  --primary: #ffffff;              /* White Buttons */
+  --primary-foreground: #E23744;    /* Red Text on Buttons */
+
+  --secondary: #F9CED2;           /* Soft red tint */
+  --secondary-foreground: #7A1A20;
+
+  --muted: #F7AEB3;
+  --muted-foreground: #7A1A20;
+
+  --accent: #ffffff;
+  --accent-foreground: #E23744;
+
+  --destructive: #d64545;
+
+  --border: #ffffff33;
+  --input: #ffffff55;
+  --ring: #ffffffaa;
+
+  /* Visualization Colors */
+  --chart-1: #ff6b81;
+  --chart-2: #ff4757;
+  --chart-3: #e84118;
+  --chart-4: #ff7f50;
+  --chart-5: #ff9f43;
+
+  /* Sidebar */
+  --sidebar: #E23744;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #E23744;
+  --sidebar-accent: #ffffff;
+  --sidebar-accent-foreground: #E23744;
+  --sidebar-border: #ffffff55;
+  --sidebar-ring: #ffffffaa;
+}
+
+/* ----------------------------- */
+/* DARK MODE (Muted Red / Black) */
+/* ----------------------------- */
+.dark {
+  --background: #2a0002;
+  --foreground: #ffffff;
+
+  --card: #3a0004;
+  --card-foreground: #ffffff;
+
+  --popover: #3a0004;
+  --popover-foreground: #ffffff;
+
+  --primary: #ffffff;
+  --primary-foreground: #E23744;
+
+  --secondary: #5c0a10;
+  --secondary-foreground: #ffffff;
+
+  --muted: #4a0a0f;
+  --muted-foreground: #e3b3b7;
+
+  --accent: #ffffff;
+  --accent-foreground: #E23744;
+
+  --destructive: #ff4d4f;
+
+  --border: #ffffff22;
+  --input: #ffffff33;
+  --ring: #ffffff99;
+
+  --chart-1: #ff6b81;
+  --chart-2: #ff4757;
+  --chart-3: #e84118;
+  --chart-4: #ff7f50;
+  --chart-5: #ff9f43;
+
+  --sidebar: #2a0002;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #E23744;
+  --sidebar-accent: #ffffff;
+  --sidebar-accent-foreground: #E23744;
+  --sidebar-border: #ffffff22;
+  --sidebar-ring: #ffffffaa;
+}
+
+/* ----------------------------- */
+/* THEME MAPPINGS */
+/* ----------------------------- */
+@theme inline {
+  --font-sans: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-commit-mono), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ----------------------------- */
+/* BASE STYLES */
+/* ----------------------------- */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ----------------------------- */
+/* UTILITIES */
+/* ----------------------------- */
+@layer utils {
+  .animate-text-shimmer {
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: text-shimmer;
+    background: var(--muted-foreground)
+      -webkit-gradient(linear, 100% 0, 0 0, from(var(--muted-foreground)), color-stop(0.5, var(--secondary-foreground)), to(var(--muted-foreground)));
+    background-repeat: no-repeat;
+    background-size: 50% 200%;
+    display: inline-block;
+  }
+
+  @keyframes text-shimmer {
+    0% { background-position: -100% 0; }
+    100% { background-position: 250% 0; }
+  }
+}
