@@ -1,0 +1,42 @@
+[
+  {
+    "id": "order-87567fe4",
+    "items": [
+      {
+        "product_id": "mug-001",
+        "name": "Ceramic Coffee Mug",
+        "unit_price": 350,
+        "quantity": 1,
+        "line_total": 350,
+        "attrs": {}
+      },
+      {
+        "product_id": "mouse-001",
+        "name": "Wireless Mouse",
+        "unit_price": 449,
+        "quantity": 1,
+        "line_total": 449,
+        "attrs": {}
+      },
+      {
+        "product_id": "mouse-001",
+        "name": "Wireless Mouse",
+        "unit_price": 449,
+        "quantity": 2,
+        "line_total": 898,
+        "attrs": {}
+      },
+      {
+        "product_id": "cable-001",
+        "name": "Usb Type C Cable",
+        "unit_price": 199,
+        "quantity": 1,
+        "line_total": 199,
+        "attrs": {}
+      }
+    ],
+    "total": 1896,
+    "currency": "INR",
+    "created_at": "2025-11-30T10:43:28.878504Z"
+  }
+]
